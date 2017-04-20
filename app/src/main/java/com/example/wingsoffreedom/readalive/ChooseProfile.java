@@ -1,6 +1,7 @@
 package com.example.wingsoffreedom.readalive;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,8 @@ public class ChooseProfile extends AppCompatActivity {
         setContentView(R.layout.activity_choose_profile);
 
 
-        ImageButton profile = (ImageButton) findViewById(R.id.profile_butn);
+        ImageButton profile = (ImageButton) findViewById(R.id.profile_btn);
+        ImageButton add_profile = (ImageButton) findViewById(R.id.add_profile_btn);
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,11 +25,16 @@ public class ChooseProfile extends AppCompatActivity {
                 startActivity(intent);
             }
 
-        }
+        });
 
+        add_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseProfile.this,    CreateProfile.class);
+                startActivity(intent);
+            }
 
-        );
-
+        });
 
 
     }

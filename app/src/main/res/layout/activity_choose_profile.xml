@@ -14,10 +14,21 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/profile"
-        android:id="@+id/profile_butn"
+        android:id="@+id/profile_btn"
         android:layout_marginTop="153dp"
         android:scaleType="fitCenter"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="38dp" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/profile"
+        android:id="@+id/add_profile_btn"
+        android:scaleType="fitCenter"
+        android:layout_alignTop="@+id/profile_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="124dp" />
+
 </RelativeLayout>
