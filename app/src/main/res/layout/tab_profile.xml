@@ -8,25 +8,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.wingsoffreedom.readalive.ReadAlive$PlaceholderFragment">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/profile"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:id="@+id/imageView" />
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/relativeLayout">
 
-    <TextView
-        android:id="@+id/profileName"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Ellen"
-        android:gravity="center"
-        android:layout_centerVertical="true"
-        android:textSize="20dp"
-        android:layout_alignStart="@+id/imageView" />
+        <View android:id="@+id/profile_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#DDDDDD"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="100dp"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile"
+            android:layout_marginStart="75dp"
+            android:id="@+id/imageView"
+            android:layout_above="@+id/profileName"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Ellen"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_alignStart="@+id/imageView" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="550dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="HELLOOOOOOOO"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 
 </RelativeLayout>
