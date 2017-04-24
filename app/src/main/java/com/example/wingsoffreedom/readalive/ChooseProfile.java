@@ -16,7 +16,7 @@ public class ChooseProfile extends AppCompatActivity {
 
 
         ImageButton profile = (ImageButton) findViewById(R.id.profile_btn);
-        ImageButton add_profile = (ImageButton) findViewById(R.id.add_profile_btn);
+        ImageButton add_profile = (ImageButton) findViewById(R.id.profile_btn);
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,14 +36,6 @@ public class ChooseProfile extends AppCompatActivity {
 
         });
 
-        add_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ChooseProfile.this,    CreateProfile.class);
-                startActivity(intent);
-            }
-
-        });
 
 
     }
