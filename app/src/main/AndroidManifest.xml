@@ -15,8 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReadAlive" />
-        <activity android:name=".CreateProfile"></activity>
+        <activity android:name=".Read" />
+        <activity android:name=".CreateProfile" />
+        <activity
+            android:name=".ReadAlive"
+            android:label="@string/title_activity_read_alive"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -3,13 +3,12 @@ package com.example.wingsoffreedom.readalive;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CreateProfile extends AppCompatActivity {
+public class Read extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_profile);
-
+        setContentView(R.layout.activity_read);
 
 
     }
