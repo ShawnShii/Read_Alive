@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,10 +9,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.wingsoffreedom.readalive.ReadAlive$PlaceholderFragment">
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I AM THE LIBRARY"/>
+    <LinearLayout
+        android:id="@+id/book_info"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_marginStart="30dp"
+        android:layout_alignTop="@+id/book_cover"
+        android:layout_toEndOf="@+id/book_cover"
+        android:layout_marginTop="22dp">
+        <TextView
+            android:id="@+id/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Polar Express"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by Chris Van Allsburg"
+            android:textSize="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/book_title" />
+        <TextView
+            android:id="@+id/book_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1st Grade"
+            android:textSize="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/book_title" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/book_cover"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/The-Polar-Express" />
 
 </RelativeLayout>
