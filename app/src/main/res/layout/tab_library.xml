@@ -50,6 +50,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="25dp"
-        android:src="@drawable/The-Polar-Express" />
+        android:src="@drawable/the_polar_express" />
 
 </RelativeLayout>
