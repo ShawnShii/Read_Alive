@@ -8,10 +8,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.wingsoffreedom.readalive.ReadAlive$PlaceholderFragment">
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I AM THE STORE"/>
+    <LinearLayout
+        android:id="@+id/book_info"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_marginRight="87dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginTop="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:id="@+id/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Polar Express"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by Chris Van Allsburg"
+            android:textSize="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/book_title" />
+        <TextView
+            android:id="@+id/book_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1st Grade"
+            android:textSize="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/book_title" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/book_cover"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/the_polar_express"
+        android:layout_marginEnd="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/book_info"
+        android:layout_marginTop="21dp" />
+
 
 </RelativeLayout>
