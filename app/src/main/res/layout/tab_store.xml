@@ -20,7 +20,6 @@
             android:layout_height="match_parent"
             android:prompt=""
             android:layout_marginRight="20dp"/>
-
         <ImageView
             android:id="@+id/Search_Button"
             android:layout_width="15dp"

@@ -13,24 +13,27 @@
 
     <ImageButton
         android:id="@+id/ellen_profile_btn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/profile"
-        android:layout_marginStart="159dp"
+        android:src="@drawable/bear_avatar"
+        android:layout_marginStart="103dp"
         android:layout_marginTop="29dp"
+        android:background="@android:color/transparent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
     <ImageButton
         android:id="@+id/add_profile_btn"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/profile"
+        android:src="@drawable/add_avatar"
         android:layout_marginEnd="178dp"
         android:layout_alignTop="@+id/ellen_profile_btn"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        />
 
     <TextView
         android:id="@+id/ellen_name"

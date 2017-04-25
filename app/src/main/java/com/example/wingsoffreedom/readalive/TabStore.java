@@ -2,6 +2,7 @@ package com.example.wingsoffreedom.readalive;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,10 +24,24 @@ public class TabStore extends Fragment {
 
         Button cart = (Button) rootView.findViewById(R.id.button_cart);
 
+        Bundle extras = getActivity().getIntent().getExtras();
+        Boolean bought = extras.getBoolean("bought");
+
+
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ShoppingCart.class);
+
+                Bundle extras = getActivity().getIntent().getExtras();
+                String name = extras.getString("name");
+                String avatar = extras.getString("avatar");
+                Boolean bought = extras.getBoolean("bought");
+
+                intent.putExtra("name", name);
+                intent.putExtra("bought", bought);
+                intent.putExtra("avatar", avatar);
+
                 startActivity(intent);
             }
 

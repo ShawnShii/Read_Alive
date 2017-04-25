@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class CreateProfile extends AppCompatActivity {
@@ -22,6 +23,22 @@ public class CreateProfile extends AppCompatActivity {
 
         final EditText nameInput = (EditText) findViewById(R.id.name_input);
 
+        Bundle extras = getIntent().getExtras();
+        String avatar = extras.getString("avatar");
+        ImageButton new_avatar = (ImageButton) findViewById(R.id.create_avatar);
+
+        if (avatar.equals("pig")) {
+            new_avatar.setImageResource(R.drawable.pig_avatar);
+        } else if (avatar.equals("panda")) {
+            new_avatar.setImageResource(R.drawable.panda_avatar);
+        } else if (avatar.equals("bear")) {
+            new_avatar.setImageResource(R.drawable.bear_avatar);
+        } else if (avatar.equals("frog")) {
+            new_avatar.setImageResource(R.drawable.frog_avatar);
+        } else {
+            new_avatar.setImageResource(R.drawable.monkey_avatar);
+        }
+
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +51,10 @@ public class CreateProfile extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-            String name = (String) nameInput.getText().toString();
+
+                String name = nameInput.getText().toString();
+                Bundle extras = getIntent().getExtras();
+                String avatar = extras.getString("avatar");
 
             if (name.isEmpty()) {
                 Toast.makeText(CreateProfile.this, "Must enter a UserName", Toast.LENGTH_LONG).show();
@@ -44,11 +64,12 @@ public class CreateProfile extends AppCompatActivity {
 
                 intent.putExtra("name", name);
 
-                /*
-                ChooseProfile.new_name.setText(name);
-                ChooseProfile.new_profile.setImageResource(R.drawable.profile);
-                ChooseProfile.new_profile.setId(R.id.add_profile_btn);
-                ChooseProfile.add_profile.setId(R.id.new_profile);*/
+                intent.putExtra("bought", false);
+                intent.putExtra("avatar", avatar);
+                //ChooseProfile.new_name.setText(name);
+                //ChooseProfile.new_profile.setImageResource(R.drawable.profile);
+                //ChooseProfile.new_profile.setId(R.id.add_profile_btn);
+                //ChooseProfile.add_profile.setId(R.id.new_profile);
 
                 startActivity(intent);
             }
