@@ -33,12 +33,13 @@
             android:hint="Search" />
 
         <Button
-            android:layout_marginLeft="100dp"
+            android:id="@+id/button_cart"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Check Out"
-            android:textColor="@android:color/darker_gray"
-            android:background="@android:color/white"/>
+            android:layout_marginLeft="100dp"
+            android:background="@android:color/white"
+            android:text="Cart"
+            android:textColor="@android:color/darker_gray" />
 
     </LinearLayout>
     
