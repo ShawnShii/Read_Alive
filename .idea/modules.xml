@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ReadAlive.iml" filepath="$PROJECT_DIR$/ReadAlive.iml" />
       <module fileurl="file://$PROJECT_DIR$/Read_Alive.iml" filepath="$PROJECT_DIR$/Read_Alive.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
