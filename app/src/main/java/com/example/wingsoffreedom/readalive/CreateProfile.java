@@ -34,6 +34,9 @@ public class CreateProfile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(CreateProfile.this, ReadAlive.class);
                 intent.putExtra("name", (String) nameInput.getText().toString());
+
+
+
                 startActivity(intent);
             }
 
