@@ -11,7 +11,7 @@
     tools:context="com.example.wingsoffreedom.readalive.ChooseProfile">
 
     <ImageButton
-        android:id="@+id/profile_btn"
+        android:id="@+id/ellen_profile_btn"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:scaleType="fitCenter"
@@ -27,6 +27,6 @@
         android:scaleType="fitCenter"
         android:src="@drawable/profile"
         android:layout_marginEnd="97dp"
-        android:layout_alignTop="@+id/profile_btn"
+        android:layout_alignTop="@+id/ellen_profile_btn"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>

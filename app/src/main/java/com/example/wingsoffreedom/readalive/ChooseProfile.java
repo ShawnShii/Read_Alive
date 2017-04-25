@@ -14,13 +14,14 @@ public class ChooseProfile extends AppCompatActivity {
         setContentView(R.layout.activity_choose_profile);
 
 
-        ImageButton profile = (ImageButton) findViewById(R.id.profile_btn);
+        ImageButton ellen_profile = (ImageButton) findViewById(R.id.ellen_profile_btn);
         ImageButton add_profile = (ImageButton) findViewById(R.id.add_profile_btn);
 
-        profile.setOnClickListener(new View.OnClickListener() {
+        ellen_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseProfile.this, ReadAlive.class);
+                intent.putExtra("name", "Ellen Smith");
                 startActivity(intent);
             }
 
