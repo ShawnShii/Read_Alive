@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.wingsoffreedom.readalive.ReadAlive$PlaceholderFragment">
+    tools:context="com.example.wingsoffreedom.readalive.ReadAlive">
 
     <RelativeLayout
         android:layout_width="300dp"
@@ -69,94 +69,207 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/gold_earned"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/gold"
+                    android:src="@drawable/gold_gray"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
                     />
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/silver_earned"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/silver"
+                    android:src="@drawable/silver_gray"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_marginLeft="60dp"/>
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/bronze_earned"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bronze"
-                    android:layout_marginLeft="50dp"/>
+                    android:src="@drawable/bronze_gray"
+                    android:layout_marginLeft="60dp"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Read 2 hours"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Read 10 days in a row"
+                    android:layout_marginLeft="60dp"/>
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Finish a picture book"
+                    android:layout_marginLeft="60dp"/>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/gold"
+                    android:src="@drawable/gold_gray"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
                     />
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/silver"
+                    android:src="@drawable/silver_gray"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_marginLeft="60dp"/>
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/bronze_earned_2"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bronze"
-                    android:layout_marginLeft="50dp"/>
+                    android:src="@drawable/bronze_gray"
+                    android:layout_marginLeft="60dp"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Read 10 hours in a week"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Finish 5 picture books"
+                    android:layout_marginLeft="60dp"/>
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Read 1 hour in a week"
+                    android:layout_marginLeft="60dp"/>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/gold"
+                    android:src="@drawable/gold_gray"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
                     />
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/silver"
+                    android:src="@drawable/silver_gray"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="50dp"/>
+                    android:layout_marginLeft="60dp"/>
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/bronze_earned_3"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bronze"
-                    android:layout_marginLeft="50dp"/>
+                    android:src="@drawable/bronze_gray"
+                    android:layout_marginLeft="60dp"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Finish 15 picture books"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Read 10 different categories"
+                    android:layout_marginLeft="60dp"/>
+
+                <TextView
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Read 1 hour in a day"
+                    android:layout_marginLeft="60dp"/>
+            </LinearLayout>
+
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
