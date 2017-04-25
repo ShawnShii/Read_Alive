@@ -3,12 +3,15 @@ package com.example.wingsoffreedom.readalive;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CreateProfile extends AppCompatActivity {
-
+    int entered_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,15 +35,22 @@ public class CreateProfile extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                String name = nameInput.getText().toString();
+
+                if (name == null || name == "" || name.isEmpty()) {
+                    Toast.makeText(CreateProfile.this, "please enter something in text box", Toast.LENGTH_SHORT).show();
+
+                }
                 Intent intent = new Intent(CreateProfile.this, ReadAlive.class);
-                intent.putExtra("name", (String) nameInput.getText().toString());
-
-
-
+                intent.putExtra("name", nameInput.getText().toString());
                 startActivity(intent);
+
             }
 
         });
+
+        
 
     }
 }
