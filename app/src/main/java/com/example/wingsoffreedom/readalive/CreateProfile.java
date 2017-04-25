@@ -36,15 +36,24 @@ public class CreateProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String name = nameInput.getText().toString();
+                String name = (String) nameInput.getText().toString();
 
-                if (name == null || name == "" || name.isEmpty()) {
-                    Toast.makeText(CreateProfile.this, "please enter something in text box", Toast.LENGTH_SHORT).show();
+                if (name.isEmpty()) {
+                    Toast.makeText(CreateProfile.this, "Must enter a UserName", Toast.LENGTH_LONG).show();
 
+                } else {
+                    Intent intent = new Intent(CreateProfile.this, ReadAlive.class);
+
+                    intent.putExtra("name", name);
+
+                    /*
+                    ChooseProfile.new_name.setText(name);
+                    ChooseProfile.new_profile.setImageResource(R.drawable.profile);
+                    ChooseProfile.new_profile.setId(R.id.add_profile_btn);
+                    ChooseProfile.add_profile.setId(R.id.new_profile);*/
+
+                    startActivity(intent);
                 }
-                Intent intent = new Intent(CreateProfile.this, ReadAlive.class);
-                intent.putExtra("name", nameInput.getText().toString());
-                startActivity(intent);
 
             }
 
