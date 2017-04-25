@@ -86,41 +86,6 @@ public class Read extends AppCompatActivity {
     }
 
     /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public PlaceholderFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.page_1, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-            return rootView;
-        }
-    }
-
-    /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
@@ -136,14 +101,20 @@ public class Read extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position) {
                 case 0:
-                    TabProfile tab1 = new TabProfile();
-                    return tab1;
+                    Page1 page1 = new Page1();
+                    return page1;
                 case 1:
-                    TabLibrary tab2 = new TabLibrary();
-                    return tab2;
+                    Page2 page2 = new Page2();
+                    return page2;
                 case 2:
-                    TabStore tab3 = new TabStore();
-                    return tab3;
+                    Page3 page3 = new Page3();
+                    return page3;
+                case 3:
+                    Page4 page4 = new Page4();
+                    return page4;
+                case 4:
+                    Page5 page5 = new Page5();
+                    return page5;
                 default:
                     return null;
             }
@@ -164,6 +135,10 @@ public class Read extends AppCompatActivity {
                     return "SECTION 2";
                 case 2:
                     return "SECTION 3";
+                case 3:
+                    return "SECTION 4";
+                case 4:
+                    return "SECTION 5";
             }
             return null;
         }
