@@ -33,7 +33,6 @@ public class TabLibrary extends Fragment {
         no_books = (TextView) rootView.findViewById(R.id.text_no_books);
 
         Bundle extras = getActivity().getIntent().getExtras();
-        String name = extras.getString("name");
         Boolean bought = extras.getBoolean("bought");
 
         if (bought) {
@@ -47,8 +46,11 @@ public class TabLibrary extends Fragment {
         bookPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle extras = getActivity().getIntent().getExtras();
+                String avatar = extras.getString("avatar");
                 Intent intent = new Intent(getActivity(), Read.class);
                 intent.putExtra("bought", true);
+                intent.putExtra("avatar", avatar);
                 startActivity(intent);
             }
 

@@ -29,6 +29,7 @@ public class ChooseProfile extends AppCompatActivity {
                 Intent intent = new Intent(ChooseProfile.this, ReadAlive.class);
                 intent.putExtra("name", "Ellen Smith");
                 intent.putExtra("bought", true);
+                intent.putExtra("avatar", "bear");
                 startActivity(intent);
             }
 
@@ -37,7 +38,7 @@ public class ChooseProfile extends AppCompatActivity {
          add_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseProfile.this, CreateProfile.class);
+                Intent intent = new Intent(ChooseProfile.this, ChooseAvatar.class);
                 startActivity(intent);
             }
 

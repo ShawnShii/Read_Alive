@@ -2,6 +2,7 @@ package com.example.wingsoffreedom.readalive;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,10 +35,12 @@ public class TabStore extends Fragment {
 
                 Bundle extras = getActivity().getIntent().getExtras();
                 String name = extras.getString("name");
+                String avatar = extras.getString("avatar");
                 Boolean bought = extras.getBoolean("bought");
 
                 intent.putExtra("name", name);
                 intent.putExtra("bought", bought);
+                intent.putExtra("avatar", avatar);
 
                 startActivity(intent);
             }

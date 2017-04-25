@@ -31,7 +31,7 @@ public class ShoppingCart extends AppCompatActivity {
             title.setText("");
             author.setText("");
             grade.setText("");
-            none.setText("Oops! Looks like you have no books in your shopping cart!");
+            none.setText("Oh no! Looks like you have no books in your shopping cart! Browse the store for more");
             total.setText("Total: $0.00");
         }
 
@@ -45,12 +45,19 @@ public class ShoppingCart extends AppCompatActivity {
 
                 Bundle extras = getIntent().getExtras();
                 String name = extras.getString("name");
+                String avatar = extras.getString("avatar");
+                Boolean bought = extras.getBoolean("bought");
 
-                intent.putExtra("name", name);
-                intent.putExtra("bought", true);
+                if (bought) {
+                    Toast.makeText(ShoppingCart.this, "Oops! There are no books in your shopping cart!", Toast.LENGTH_LONG).show();
+                } else {
+                    intent.putExtra("name", name);
+                    intent.putExtra("bought", true);
+                    intent.putExtra("avatar", avatar);
 
-                Toast.makeText(ShoppingCart.this, "Congratulations! You just bought Polar Express", Toast.LENGTH_LONG).show();
-                startActivity(intent);
+                    Toast.makeText(ShoppingCart.this, "Congratulations! You just bought The Polar Express", Toast.LENGTH_LONG).show();
+                    startActivity(intent);
+                }
             }
 
         });
