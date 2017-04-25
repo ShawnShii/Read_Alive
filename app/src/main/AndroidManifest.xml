@@ -23,7 +23,8 @@
         <activity
             android:name=".Read"
             android:label="@string/title_activity_read"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ShoppingCart"></activity>
     </application>
 
 </manifest>
