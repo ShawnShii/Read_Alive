@@ -28,6 +28,7 @@ public class ChooseProfile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseProfile.this, ReadAlive.class);
                 intent.putExtra("name", "Ellen Smith");
+                intent.putExtra("bought", true);
                 startActivity(intent);
             }
 

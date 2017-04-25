@@ -20,6 +20,7 @@ public class TabProfile extends Fragment {
         View rootView = inflater.inflate(R.layout.tab_profile, container, false);
         Bundle extras = getActivity().getIntent().getExtras();
         String name = extras.getString("name");
+
         TextView userName = (TextView) rootView.findViewById(R.id.profileName);
         userName.setText(name);
 

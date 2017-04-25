@@ -23,10 +23,22 @@ public class TabStore extends Fragment {
 
         Button cart = (Button) rootView.findViewById(R.id.button_cart);
 
+        Bundle extras = getActivity().getIntent().getExtras();
+        Boolean bought = extras.getBoolean("bought");
+
+
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ShoppingCart.class);
+
+                Bundle extras = getActivity().getIntent().getExtras();
+                String name = extras.getString("name");
+                Boolean bought = extras.getBoolean("bought");
+
+                intent.putExtra("name", name);
+                intent.putExtra("bought", bought);
+
                 startActivity(intent);
             }
 

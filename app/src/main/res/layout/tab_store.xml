@@ -17,8 +17,7 @@
 
         <Spinner
             android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:prompt=""/>
+            android:layout_height="match_parent" />
 
         <ImageView
             android:id="@+id/Search_Button"

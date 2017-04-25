@@ -22,7 +22,6 @@
             android:id="@+id/book_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The Polar Express"
             android:textSize="25dp"
             android:textStyle="bold"/>
 
@@ -30,7 +29,6 @@
             android:id="@+id/book_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="by Chris Van Allsburg"
             android:textSize="16dp"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/book_title" />
@@ -38,7 +36,6 @@
             android:id="@+id/book_grade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1st Grade"
             android:textSize="16dp"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/book_title" />
@@ -46,11 +43,31 @@
 
     <ImageButton
         android:id="@+id/book_cover"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Your Current Books"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
-        android:src="@drawable/the_polar_express" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/text_no_books"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Oh no! You currently have no books! Head over to the store to pick some out!"
+        android:layout_alignTop="@+id/book_cover"
+        android:layout_alignStart="@+id/book_cover" />
 
 </RelativeLayout>

@@ -34,7 +34,7 @@ public class CreateProfile extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-            String name = (String) nameInput.getText().toString();
+            String name = nameInput.getText().toString();
 
             if (name.isEmpty()) {
                 Toast.makeText(CreateProfile.this, "Must enter a UserName", Toast.LENGTH_LONG).show();
@@ -44,11 +44,11 @@ public class CreateProfile extends AppCompatActivity {
 
                 intent.putExtra("name", name);
 
-                /*
-                ChooseProfile.new_name.setText(name);
-                ChooseProfile.new_profile.setImageResource(R.drawable.profile);
-                ChooseProfile.new_profile.setId(R.id.add_profile_btn);
-                ChooseProfile.add_profile.setId(R.id.new_profile);*/
+                intent.putExtra("bought", false);
+                //ChooseProfile.new_name.setText(name);
+                //ChooseProfile.new_profile.setImageResource(R.drawable.profile);
+                //ChooseProfile.new_profile.setId(R.id.add_profile_btn);
+                //ChooseProfile.add_profile.setId(R.id.new_profile);
 
                 startActivity(intent);
             }
