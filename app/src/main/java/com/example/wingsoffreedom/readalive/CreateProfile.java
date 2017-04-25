@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CreateProfile extends AppCompatActivity {
 
@@ -32,12 +33,25 @@ public class CreateProfile extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CreateProfile.this, ReadAlive.class);
-                intent.putExtra("name", (String) nameInput.getText().toString());
+                String name = (String) nameInput.getText().toString();
 
+                if (name.isEmpty()) {
+                    Toast.makeText(CreateProfile.this, "Must enter a UserName", Toast.LENGTH_LONG).show();
 
+                } else {
+                    Intent intent = new Intent(CreateProfile.this, ReadAlive.class);
 
-                startActivity(intent);
+                    intent.putExtra("name", name);
+
+                    /*
+                    ChooseProfile.new_name.setText(name);
+                    ChooseProfile.new_profile.setImageResource(R.drawable.profile);
+                    ChooseProfile.new_profile.setId(R.id.add_profile_btn);
+                    ChooseProfile.add_profile.setId(R.id.new_profile);*/
+
+                    startActivity(intent);
+                }
+
             }
 
         });
