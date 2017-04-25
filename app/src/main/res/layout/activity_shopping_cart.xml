@@ -18,12 +18,12 @@
 
     <ImageButton
         android:id="@+id/book_cover"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="194dp"
+        android:layout_height="170dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/the_polar_express"
-        tools:layout_editor_absoluteY="98dp"
+        tools:layout_editor_absoluteY="128dp"
         tools:layout_editor_absoluteX="72dp" />
 
     <LinearLayout
@@ -34,8 +34,8 @@
         android:layout_marginStart="30dp"
         android:layout_toEndOf="@+id/book_cover"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="349dp"
-        tools:layout_editor_absoluteY="105dp">
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="146dp">
 
         <TextView
             android:id="@+id/book_title"
@@ -64,13 +64,29 @@
             android:textSize="16dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:text="Checkout"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="367dp" />
+        tools:layout_editor_absoluteX="608dp"
+        tools:layout_editor_absoluteY="374dp">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: $15.00"
+            android:textSize="25dp"
+            android:layout_marginLeft="50dp" />
+
+        <Button
+            android:id="@+id/button_checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_marginLeft="50dp"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true" />
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
