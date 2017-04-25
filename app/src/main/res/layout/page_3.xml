@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wingsoffreedom.readalive.Read$PlaceholderFragment">
+    tools:context="com.example.wingsoffreedom.readalive.Read">
 
     <ImageView
         android:id="@+id/page2_0"

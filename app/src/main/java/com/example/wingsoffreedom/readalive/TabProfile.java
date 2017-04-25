@@ -39,6 +39,21 @@ public class TabProfile extends Fragment {
             profile_avatar.setImageResource(R.drawable.monkey_avatar);
         }
 
+
+        if (name.equals("Ellen Smith")) {
+            ImageView gold = (ImageView) rootView.findViewById(R.id.gold_earned);
+            ImageView silver = (ImageView) rootView.findViewById(R.id.silver_earned);
+            ImageView bronze = (ImageView) rootView.findViewById(R.id.bronze_earned);
+            ImageView bronze_2 = (ImageView) rootView.findViewById(R.id.bronze_earned_2);
+            ImageView bronze_3 = (ImageView) rootView.findViewById(R.id.bronze_earned_3);
+
+            gold.setImageResource(R.drawable.gold);
+            silver.setImageResource(R.drawable.silver);
+            bronze.setImageResource(R.drawable.bronze);
+            bronze_2.setImageResource(R.drawable.bronze);
+            bronze_3.setImageResource(R.drawable.bronze);
+        }
+
         return rootView;
     }
 }
