@@ -6,16 +6,16 @@
 
     <ImageView
         android:id="@+id/page2_0"
-        android:layout_width="502dp"
+        android:layout_width="505dp"
         android:layout_height="511dp"
         android:src="@drawable/page3_0"
+        android:layout_marginBottom="110dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="24dp" />
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/page2_1"
-        android:layout_width="525dp"
+        android:layout_width="522dp"
         android:layout_height="511dp"
         android:src="@drawable/page3_1"
         android:layout_alignBottom="@+id/page2_0"

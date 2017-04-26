@@ -37,6 +37,15 @@ public class ShoppingCart extends AppCompatActivity {
 
 
         Button checkout = (Button) findViewById(R.id.button_checkout);
+        TextView back = (TextView) findViewById(R.id.store_back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+
+        });
 
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +70,6 @@ public class ShoppingCart extends AppCompatActivity {
             }
 
         });
-
 
     }
 }

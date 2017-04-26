@@ -17,8 +17,8 @@
         android:text="Your Cart"
         android:textSize="30dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteY="48dp"
-        tools:layout_editor_absoluteX="56dp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:id="@+id/cover"
@@ -104,6 +104,16 @@
         android:textSize="16dp"
         android:layout_below="@+id/cart_title"
         android:layout_alignStart="@+id/cover" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/store_back"
+        android:text="Back to Store"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
