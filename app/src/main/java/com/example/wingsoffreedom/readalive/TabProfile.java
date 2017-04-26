@@ -4,6 +4,7 @@ package com.example.wingsoffreedom.readalive;
  * Created by WingsofFreedom on 4/24/17.
  */
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -53,6 +54,17 @@ public class TabProfile extends Fragment {
             bronze_2.setImageResource(R.drawable.bronze);
             bronze_3.setImageResource(R.drawable.bronze);
         }
+
+        TextView userChange = (TextView) rootView.findViewById(R.id.user_change);
+
+        userChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChooseProfile.class);
+                startActivity(intent);
+            }
+
+        });
 
         return rootView;
     }
