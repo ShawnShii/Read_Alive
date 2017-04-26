@@ -7,7 +7,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.wingsoffreedom.readalive.ReadAlive">
+    tools:context="com.example.wingsoffreedom.readalive.ReadAlive"
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,6 +50,12 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/no_store_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,14 +81,15 @@
             android:weightSum="1">
 
             <ImageButton
-                android:id="@id/book_cover"
+                android:id="@+id/store_cover"
                 android:layout_width="190dp"
                 android:layout_height="152dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginEnd="27dp"
                 android:layout_marginTop="50dp"
                 android:layout_toStartOf="@+id/book_info"
-                android:src="@drawable/the_polar_express" />
+                android:src="@drawable/the_polar_express"
+                android:background="@android:color/transparent"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -91,6 +99,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/store_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="The Polar Express"
@@ -98,7 +107,7 @@
                     android:textStyle="bold" />  
 
                 <TextView
-                    android:id="@+id/book_author"
+                    android:id="@+id/store_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/book_title"
@@ -106,7 +115,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/book_grade"
+                    android:id="@+id/store_grade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/book_title"
@@ -115,9 +124,21 @@
 
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add to Cart"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/darker_gray"/>
     </LinearLayout>
 
     <View
+        android:id="@+id/separator"
         android:layout_marginLeft="185dp"
         android:layout_width="600dp"
         android:layout_height="3dp"
