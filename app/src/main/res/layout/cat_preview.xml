@@ -1,0 +1,141 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/trophy_1_popup"
+    tools:context="com.example.wingsoffreedom.readalive.trophy_1"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="225dp"
+                android:layout_height="375dp"
+                android:src="@drawable/cat_hat_cover"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Cart"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="#fef65b"/>
+                <TextView
+
+                    android:layout_width="75dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="$7.99"
+                    android:background="#b2b2b2"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Cat in the Hat"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#444444"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#b2b2b2"
+                    android:text="by Dr. Seuss"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#444444"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:text="1st Grade"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Summary"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Join the Cat in the Hat as he makes \nlearning to read a joy. It’s a rainy day \nand Dick and Sally can’t find anything \nto do ...until the Cat in the Hat \nunexpectedly appears and turns their \ndreary afternoon into a fun-filled \nextravaganza!" />
+
+                </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginLeft="75dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textStyle="bold"
+                       android:text="Reviews"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="15dp"
+                       android:text="He may be an old standby, but he \nnever lets us down. When in doubt, \nturn to the story of the cat that \ntransformed a dull, rainy afternoon \ninto a magical and just-messy-\nenough adventure. There's another, \nhidden adventure, too: this book \nreally will help children learn to \nread. With his simple ..."/>
+
+               </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

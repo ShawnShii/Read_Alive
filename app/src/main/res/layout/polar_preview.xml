@@ -1,0 +1,141 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/trophy_1_popup"
+    tools:context="com.example.wingsoffreedom.readalive.trophy_1"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="225dp"
+                android:layout_height="375dp"
+                android:src="@drawable/the_polar_express"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Cart"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="#fef65b"/>
+                <TextView
+
+                    android:layout_width="75dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="$8.99"
+                    android:background="#b2b2b2"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Polar Express"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#444444"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#b2b2b2"
+                    android:text="by Chris Van Allsburg"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#444444"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:text="1st Grade"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Summary"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A young boy, lying awake one \nChristmas Eve, is welcomed \naboard a magical trip to the \nNorth Pole . . .
+
+Through dark forests, over tall \nmountains, and across a desert \nof ice, the Polar Express makes \nits way to the city atop the world, \nwhere the boy will make his \nChristmas wish." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="65dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Reviews"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="This book and movie are an obsession for \nmy little boy. He would have me read him this \nevery night before bed all year if I didn't tell him \nthat Santa took it back to the north pole (along \nwith all the other Christmas books) when he \nbrought the presents. He still insists on watching \nthe movie several times a week, because I wasn't \nslick enough to hide that. We're also going to ride \nthe Texas State Railroad Polar Express ride this \nyear, because the only thing he asked for for \nChristmas was to ride a train. He'll be 4 in \nDecember, so the magic is still very much \nalive for him." />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

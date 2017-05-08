@@ -19,6 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
             android:text="Grade Level:"/>
         <Spinner
             android:layout_width="100dp"
@@ -62,15 +63,64 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ExpandableListView
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:id="@+id/book_category">
-            </ExpandableListView>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="SEASONAL CHRISTMAS SWWAGGGG"/>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/black" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="CATEGORY 2"/>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="CATEGORY 3"/>
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="CATEGORY 4"/>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/black" />
+
 
         </LinearLayout>
 
@@ -86,13 +136,12 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/store_cover"
                     android:layout_width="190dp"
                     android:layout_height="152dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="27dp"
-                    android:layout_marginTop="50dp"
                     android:layout_toStartOf="@+id/book_info"
                     android:src="@drawable/the_polar_express"
                     android:background="@android:color/transparent"/>
@@ -101,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -137,6 +186,7 @@
                 android:layout_height="3dp"
                 android:layout_marginTop="30dp"
                 android:background="@android:color/black" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,30 +195,30 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/store_cover2"
                     android:layout_width="190dp"
                     android:layout_height="152dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="27dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="25dp"
                     android:layout_toStartOf="@+id/book_info"
                     android:adjustViewBounds="true"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/where_the_wild_things_are_cover" />
+                    android:src="@drawable/cat_hat_cover" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/store_title2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Where the Wild Things Are"
+                        android:text="The Cat in the Hat"
                         android:textSize="25sp"
                         android:textStyle="bold" />  
 
@@ -177,7 +227,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/book_title"
-                        android:text="by Maurice Sendak"
+                        android:text="by Dr. Seuss"
                         android:textSize="16sp" />
 
                     <TextView
@@ -201,5 +251,8 @@
             android:layout_marginLeft="120dp"
             android:background="@android:color/white"
             android:textColor="@android:color/darker_gray"/>
+
     </LinearLayout>
+
+
 </LinearLayout>
