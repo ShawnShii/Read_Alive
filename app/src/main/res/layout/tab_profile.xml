@@ -124,7 +124,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Read 2 hours"
+                    android:text="2 Hours"
                     android:layout_marginLeft="10dp"
                     />
 
@@ -134,7 +134,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Read 10 days in a row"
+                    android:text="10 Days"
                     android:layout_marginLeft="60dp"/>
 
                 <TextView
@@ -143,7 +143,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Finish a picture book"
+                    android:text="Picture Book"
                     android:layout_marginLeft="60dp"/>
             </LinearLayout>
 
@@ -194,7 +194,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Read 10 hours in a week"
+                    android:text="10 Hours Week"
                     android:layout_marginLeft="10dp"
                     />
 
@@ -204,7 +204,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Finish 5 picture books"
+                    android:text="5 Picture Books"
                     android:layout_marginLeft="60dp"/>
 
                 <TextView
@@ -213,7 +213,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Read 1 hour in a week"
+                    android:text="1 Hour Week"
                     android:layout_marginLeft="60dp"/>
             </LinearLayout>
 
@@ -264,7 +264,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Finish 15 picture books"
+                    android:text="15 Picture Books"
                     android:layout_marginLeft="10dp"
                     />
 
@@ -274,7 +274,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Read 10 different categories"
+                    android:text="10 Categories"
                     android:layout_marginLeft="60dp"/>
 
                 <TextView
@@ -283,7 +283,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="Read 1 hour in a day"
+                    android:text="1 Hour Day"
                     android:layout_marginLeft="60dp"/>
             </LinearLayout>
 
@@ -293,8 +293,7 @@
     <FrameLayout
         android:id="@+id/test"
         android:layout_width="550dp"
-        android:layout_height="match_parent"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/nestedScrollView"></FrameLayout>
+        android:layout_height="550dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"></FrameLayout>
 </RelativeLayout>

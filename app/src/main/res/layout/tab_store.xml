@@ -87,7 +87,7 @@
                 android:weightSum="1">
 
                 <ImageButton
-                    android:id="@+id/store_cover2"
+                    android:id="@+id/store_cover"
                     android:layout_width="190dp"
                     android:layout_height="152dp"
                     android:layout_alignParentTop="true"
@@ -146,16 +146,16 @@
                 android:weightSum="1">
 
                 <ImageButton
-                    android:id="@+id/store_cover"
+                    android:id="@+id/store_cover2"
                     android:layout_width="190dp"
                     android:layout_height="152dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="27dp"
                     android:layout_marginTop="10dp"
                     android:layout_toStartOf="@+id/book_info"
-                    android:src="@drawable/where_the_wild_things_are_cover"
+                    android:adjustViewBounds="true"
                     android:background="@android:color/transparent"
-                    android:adjustViewBounds="true"/>
+                    android:src="@drawable/where_the_wild_things_are_cover" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"

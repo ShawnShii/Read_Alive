@@ -102,8 +102,8 @@ public class TabStore extends Fragment {
             }
 
         });
-    return rootView;
-}
+        return rootView;
+    }
     /*
      * Preparing the list data
      */
