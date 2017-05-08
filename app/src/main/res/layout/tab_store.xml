@@ -71,60 +71,126 @@
                 android:layout_height="200dp"
                 android:id="@+id/book_category">
             </ExpandableListView>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <ImageButton
-                android:id="@+id/store_cover"
-                android:layout_width="190dp"
-                android:layout_height="152dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="27dp"
-                android:layout_marginTop="50dp"
-                android:layout_toStartOf="@+id/book_info"
-                android:src="@drawable/the_polar_express"
-                android:background="@android:color/transparent"/>
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:orientation="vertical">
+                android:layout_marginLeft="50dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
-                <TextView
-                    android:id="@+id/store_title"
+                <ImageButton
+                    android:id="@+id/store_cover2"
+                    android:layout_width="190dp"
+                    android:layout_height="152dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toStartOf="@+id/book_info"
+                    android:src="@drawable/the_polar_express"
+                    android:background="@android:color/transparent"/>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The Polar Express"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />  
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/store_author"
+                    <TextView
+                        android:id="@+id/store_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Polar Express"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />  
+
+                    <TextView
+                        android:id="@+id/store_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/book_title"
+                        android:text="by Chris Van Allsburg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/store_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/book_title"
+                        android:text="1st Grade"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/separator"
+                android:layout_marginLeft="65dp"
+                android:layout_width="650dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/black" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/store_cover"
+                    android:layout_width="190dp"
+                    android:layout_height="152dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/book_info"
+                    android:src="@drawable/where_the_wild_things_are_cover"
+                    android:background="@android:color/transparent"
+                    android:adjustViewBounds="true"/>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/book_title"
-                    android:text="by Chris Van Allsburg"
-                    android:textSize="16sp" />
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/store_grade"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/book_title"
-                    android:text="1st Grade"
-                    android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/store_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Where the Wild Things Are"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />  
 
+                    <TextView
+                        android:id="@+id/store_author2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/book_title"
+                        android:text="by Maurice Sendak"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/store_grade2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/book_title"
+                        android:text="1st Grade"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
         <Button
             android:id="@+id/add_to_cart"
             android:layout_width="wrap_content"
@@ -132,16 +198,8 @@
             android:layout_weight="1"
             android:text="Add to Cart"
             android:layout_marginTop="150dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="120dp"
             android:background="@android:color/white"
             android:textColor="@android:color/darker_gray"/>
     </LinearLayout>
-
-    <View
-        android:id="@+id/separator"
-        android:layout_marginLeft="185dp"
-        android:layout_width="600dp"
-        android:layout_height="3dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/black" />
 </LinearLayout>

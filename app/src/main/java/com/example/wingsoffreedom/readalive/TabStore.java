@@ -111,8 +111,8 @@ public class TabStore extends Fragment {
     private void prepareListData() {
 
 
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
+        listDataHeader = new ArrayList<>();
+        listDataChild = new HashMap<>();
 
         // Adding child data
         listDataHeader.add("Chapter Books");
