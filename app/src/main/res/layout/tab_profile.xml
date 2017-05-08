@@ -60,7 +60,8 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/nestedScrollView" />
+        android:layout_alignStart="@+id/nestedScrollView"
+        android:id="@+id/textView3" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="550dp"
@@ -71,6 +72,7 @@
         android:id="@+id/nestedScrollView">
 
         <LinearLayout
+            android:id="@+id/trophies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -80,7 +82,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/gold_earned"
+                    android:id="@+id/trophy_r_2_hr"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:scaleType="fitCenter"
@@ -91,7 +93,7 @@
                     />
 
                 <ImageView
-                    android:id="@+id/silver_earned"
+                    android:id="@+id/trophy_r_10_days"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:scaleType="fitCenter"
@@ -101,7 +103,7 @@
                     android:layout_marginLeft="60dp"/>
 
                 <ImageView
-                    android:id="@+id/bronze_earned"
+                    android:id="@+id/trophy_finish_pic"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:layout_alignParentTop="true"
@@ -150,6 +152,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/trophy_r_10_week"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:scaleType="fitCenter"
@@ -160,6 +163,7 @@
                     />
 
                 <ImageView
+                    android:id="@+id/trophy_finish_5_pic"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:scaleType="fitCenter"
@@ -169,7 +173,7 @@
                     android:layout_marginLeft="60dp"/>
 
                 <ImageView
-                    android:id="@+id/bronze_earned_2"
+                    android:id="@+id/trophy_r_1_hr_week"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:layout_alignParentTop="true"
@@ -218,6 +222,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/trophy_finish_15_pic"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:scaleType="fitCenter"
@@ -228,6 +233,7 @@
                     />
 
                 <ImageView
+                    android:id="@+id/trophy_10_cat"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:scaleType="fitCenter"
@@ -237,7 +243,7 @@
                     android:layout_marginLeft="60dp"/>
 
                 <ImageView
-                    android:id="@+id/bronze_earned_3"
+                    android:id="@+id/trophy_r_1_hr_day"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:layout_alignParentTop="true"
@@ -281,9 +287,14 @@
                     android:layout_marginLeft="60dp"/>
             </LinearLayout>
 
-
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-
+    <FrameLayout
+        android:id="@+id/test"
+        android:layout_width="550dp"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/nestedScrollView"></FrameLayout>
 </RelativeLayout>
