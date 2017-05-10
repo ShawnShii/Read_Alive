@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class polar_preview extends Fragment {
+public class cat_preview extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,14 +21,14 @@ public class polar_preview extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        final View rootView = inflater.inflate(R.layout.polar_preview, container, false);
+        final View rootView = inflater.inflate(R.layout.cat_preview, container, false);
 
-        final TextView close = (TextView) rootView.findViewById(R.id.close_polar);
+        final TextView close = (TextView) rootView.findViewById(R.id.close_cat);
 
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView cover = (ImageView) rootView.findViewById(R.id.polar_cover);
+                ImageView cover = (ImageView) rootView.findViewById(R.id.cat_cover);
                 TextView add = (TextView) rootView.findViewById(R.id.add);
                 TextView cost = (TextView) rootView.findViewById(R.id.cost);
                 TextView title = (TextView) rootView.findViewById(R.id.title);
@@ -39,7 +39,7 @@ public class polar_preview extends Fragment {
                 TextView rev_tag = (TextView) rootView.findViewById(R.id.rev_tag);
                 TextView rev = (TextView) rootView.findViewById(R.id.reviews);
 
-                FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.polar_preview);
+                FrameLayout preview = (FrameLayout) rootView.findViewById(R.id.cat_preview);
 
                 cover.setImageResource(0);
                 add.setText("");

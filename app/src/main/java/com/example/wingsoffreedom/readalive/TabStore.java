@@ -59,9 +59,9 @@ public class TabStore extends Fragment {
         Boolean bought = extras.getBoolean("bought");
 
         ImageView cover = (ImageView) rootView.findViewById(R.id.store_cover);
+        ImageView cover2 = (ImageView) rootView.findViewById(R.id.store_cover2);
 
         if (bought) {
-            cover = (ImageView) rootView.findViewById(R.id.store_cover);
             TextView title = (TextView) rootView.findViewById(R.id.store_title);
             TextView author = (TextView) rootView.findViewById(R.id.store_author);
             TextView grade = (TextView) rootView.findViewById(R.id.store_grade);
@@ -84,6 +84,16 @@ public class TabStore extends Fragment {
                 final Fragment book = new polar_preview();
                 final FragmentTransaction bookInfoFrag = getChildFragmentManager().beginTransaction();
                 bookInfoFrag.add(R.id.show_book_info, book, "polar").addToBackStack("polar").commit();
+            }
+
+        });
+
+        cover2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Fragment book = new cat_preview();
+                final FragmentTransaction bookInfoFrag = getChildFragmentManager().beginTransaction();
+                bookInfoFrag.add(R.id.show_book_info, book, "cat").addToBackStack("cat").commit();
             }
 
         });

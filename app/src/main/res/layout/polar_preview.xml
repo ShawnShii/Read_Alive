@@ -150,15 +150,16 @@ Through dark forests, over tall \nmountains, and across a desert \nof ice, the P
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/close_polar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Close [X]"
-            android:textSize="25dp"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
             android:layout_marginBottom="35dp"
-            android:layout_marginEnd="61dp"/>
+            android:layout_marginEnd="61dp"
+            android:text="Close [X]"
+            android:textSize="25dp" />
     </RelativeLayout>
 </FrameLayout>

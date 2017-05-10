@@ -29,6 +29,7 @@ public class ChooseProfile extends AppCompatActivity {
                 Intent intent = new Intent(ChooseProfile.this, ReadAlive.class);
                 intent.putExtra("name", "Ellen Smith");
                 intent.putExtra("bought", true);
+                intent.putExtra("bought_cat", true);
                 intent.putExtra("avatar", "bear");
                 startActivity(intent);
             }

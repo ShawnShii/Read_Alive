@@ -65,6 +65,7 @@ public class CreateProfile extends AppCompatActivity {
                 intent.putExtra("name", name);
 
                 intent.putExtra("bought", false);
+                intent.putExtra("bought_cat", false);
                 intent.putExtra("avatar", avatar);
                 //ChooseProfile.new_name.setText(name);
                 //ChooseProfile.new_profile.setImageResource(R.drawable.profile);
