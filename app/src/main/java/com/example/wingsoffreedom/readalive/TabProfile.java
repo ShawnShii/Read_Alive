@@ -7,12 +7,15 @@ package com.example.wingsoffreedom.readalive;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.lang.reflect.Field;
 
 import static android.R.attr.name;
 
@@ -77,7 +80,7 @@ public class TabProfile extends Fragment {
             public void onClick(View v) {
                 Fragment trophy_1 = new trophy_1();
                 FragmentTransaction trophyFrag = getChildFragmentManager().beginTransaction();
-                trophyFrag.add(R.id.test, trophy_1, "trophy_1").commit();
+                trophyFrag.add(R.id.test, trophy_1, "trophy_1").addToBackStack("trophy1").commit();
             }
 
         });

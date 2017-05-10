@@ -2,6 +2,8 @@ package com.example.wingsoffreedom.readalive;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +37,6 @@ public class trophy_1 extends Fragment {
                 trophy_img.setImageResource(0);
                 trophy_txt.setText("");
                 close.setText("");
-                trophy_layout.setVisibility(View.INVISIBLE);
             }
         });
 

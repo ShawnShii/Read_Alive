@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,10 +58,13 @@
         android:layout_height="wrap_content"
         android:textSize="16dp" />
 
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="100dp"
@@ -72,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="SEASONAL CHRISTMAS SWWAGGGG"/>
+                android:text="SEASONAL CHRISTMAS SWWAGGGG" />
 
             <View
                 android:id="@+id/line"
@@ -86,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="CATEGORY 2"/>
+                android:text="CATEGORY 2" />
 
             <View
                 android:id="@+id/line2"
@@ -99,7 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="CATEGORY 3"/>
+                android:text="CATEGORY 3" />
 
             <View
                 android:id="@+id/line3"
@@ -112,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="CATEGORY 4"/>
+                android:text="CATEGORY 4" />
 
             <View
                 android:id="@+id/line4"
@@ -143,8 +147,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="27dp"
                     android:layout_toStartOf="@+id/book_info"
-                    android:src="@drawable/the_polar_express"
-                    android:background="@android:color/transparent"/>
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/the_polar_express" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -179,11 +183,12 @@
 
                 </LinearLayout>
             </LinearLayout>
+
             <View
                 android:id="@+id/separator"
-                android:layout_marginLeft="65dp"
                 android:layout_width="650dp"
                 android:layout_height="3dp"
+                android:layout_marginLeft="65dp"
                 android:layout_marginTop="30dp"
                 android:background="@android:color/black" />
 
@@ -241,18 +246,43 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
         <Button
             android:id="@+id/add_to_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Add to Cart"
-            android:layout_marginTop="150dp"
             android:layout_marginLeft="120dp"
+            android:layout_marginTop="150dp"
+            android:layout_weight="1"
             android:background="@android:color/white"
-            android:textColor="@android:color/darker_gray"/>
+            android:text="Add to Cart"
+            android:textColor="@android:color/darker_gray" />
 
     </LinearLayout>
 
+    <FrameLayout
+        android:id="@+id/show_book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/show_book_info">
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="35dp"
+                android:layout_marginEnd="61dp"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

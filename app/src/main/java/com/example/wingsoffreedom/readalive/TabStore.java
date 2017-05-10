@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,16 +41,15 @@ public class TabStore extends Fragment {
         View rootView = inflater.inflate(R.layout.tab_store, container, false);
 
         // get the listview
-        ExpandableListView expListView = (ExpandableListView) rootView.findViewById(R.id.book_category);
+        //ExpandableListView expListView = (ExpandableListView) rootView.findViewById(R.id.book_category);
 
         // preparing list data
-        prepareListData();
+        //prepareListData();
 
         //listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
-        expListView.setAdapter(listAdapter);
-
+        //expListView.setAdapter(listAdapter);
 
 
         Button cart = (Button) rootView.findViewById(R.id.button_cart);
@@ -57,14 +58,16 @@ public class TabStore extends Fragment {
         Bundle extras = getActivity().getIntent().getExtras();
         Boolean bought = extras.getBoolean("bought");
 
+        ImageView cover = (ImageView) rootView.findViewById(R.id.store_cover);
+
         if (bought) {
-            ImageButton cover = (ImageButton) rootView.findViewById(R.id.store_cover);
+            cover = (ImageView) rootView.findViewById(R.id.store_cover);
             TextView title = (TextView) rootView.findViewById(R.id.store_title);
             TextView author = (TextView) rootView.findViewById(R.id.store_author);
             TextView grade = (TextView) rootView.findViewById(R.id.store_grade);
             TextView none = (TextView) rootView.findViewById(R.id.no_store_books);
             Button add = (Button) rootView.findViewById(R.id.add_to_cart);
-            View divide = (View) rootView.findViewById(R.id.separator);
+            View divide = rootView.findViewById(R.id.separator);
 
             cover.setImageResource(0);
             title.setText("");
@@ -74,6 +77,16 @@ public class TabStore extends Fragment {
             divide.setVisibility(View.INVISIBLE);
             none.setText("Wow! Looks like you've bought all the books in the store! Good job!");
         }
+
+        cover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Fragment book = new polar_preview();
+                final FragmentTransaction bookInfoFrag = getChildFragmentManager().beginTransaction();
+                bookInfoFrag.add(R.id.show_book_info, book, "polar").addToBackStack("polar").commit();
+            }
+
+        });
 
 
         cart.setOnClickListener(new View.OnClickListener() {
@@ -141,5 +154,21 @@ public class TabStore extends Fragment {
         listDataChild.put(listDataHeader.get(0), chapter_books); // Header, Child data
         listDataChild.put(listDataHeader.get(1), picture_books);
         listDataChild.put(listDataHeader.get(2), other);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+
+        try {
+            Field childFragmentManager = Fragment.class.getDeclaredField("mChildFragmentManager");
+            childFragmentManager.setAccessible(true);
+            childFragmentManager.set(this, null);
+
+        } catch (NoSuchFieldException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

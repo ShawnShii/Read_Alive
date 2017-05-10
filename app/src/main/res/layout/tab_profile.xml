@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/profile"
     tools:context="com.example.wingsoffreedom.readalive.ReadAlive">
 
     <RelativeLayout
@@ -60,7 +61,9 @@
         android:textSize="16dp"
         android:textStyle="bold"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="21dp" />
 
     <TextView
         android:layout_width="500dp"
