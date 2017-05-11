@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class polar_preview extends Fragment {
 
@@ -24,6 +25,16 @@ public class polar_preview extends Fragment {
         final View rootView = inflater.inflate(R.layout.polar_preview, container, false);
 
         final TextView close = (TextView) rootView.findViewById(R.id.close_polar);
+
+        TextView add = (TextView) rootView.findViewById(R.id.add);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "The Polar Express has been added to your cart!", Toast.LENGTH_LONG).show();
+            }
+
+        });
 
         close.setOnClickListener(new View.OnClickListener() {
             @Override

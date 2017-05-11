@@ -54,9 +54,11 @@ public class TabStore extends Fragment {
 
         Button cart = (Button) rootView.findViewById(R.id.button_cart);
         Button add_to_cart = (Button) rootView.findViewById(R.id.add_to_cart);
+        TextView none = (TextView) rootView.findViewById(R.id.no_store_books);
 
         Bundle extras = getActivity().getIntent().getExtras();
         Boolean bought = extras.getBoolean("bought");
+        Boolean bought_cat = extras.getBoolean("bought_cat");
 
         ImageView cover = (ImageView) rootView.findViewById(R.id.store_cover);
         ImageView cover2 = (ImageView) rootView.findViewById(R.id.store_cover2);
@@ -65,39 +67,51 @@ public class TabStore extends Fragment {
             TextView title = (TextView) rootView.findViewById(R.id.store_title);
             TextView author = (TextView) rootView.findViewById(R.id.store_author);
             TextView grade = (TextView) rootView.findViewById(R.id.store_grade);
-            TextView none = (TextView) rootView.findViewById(R.id.no_store_books);
-            Button add = (Button) rootView.findViewById(R.id.add_to_cart);
+
             View divide = rootView.findViewById(R.id.separator);
 
             cover.setImageResource(0);
             title.setText("");
             author.setText("");
             grade.setText("");
-            add.setVisibility(View.INVISIBLE);
             divide.setVisibility(View.INVISIBLE);
-            none.setText("Wow! Looks like you've bought all the books in the store! Good job!");
+        } else {
+            cover.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Fragment book = new polar_preview();
+                    final FragmentTransaction bookInfoFrag = getChildFragmentManager().beginTransaction();
+                    bookInfoFrag.add(R.id.show_book_info, book, "polar").addToBackStack("polar").commit();
+                }
+
+            });
         }
 
-        cover.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Fragment book = new polar_preview();
-                final FragmentTransaction bookInfoFrag = getChildFragmentManager().beginTransaction();
-                bookInfoFrag.add(R.id.show_book_info, book, "polar").addToBackStack("polar").commit();
-            }
+        if (bought_cat) {
+            TextView title = (TextView) rootView.findViewById(R.id.store_title2);
+            TextView author = (TextView) rootView.findViewById(R.id.store_author2);
+            TextView grade = (TextView) rootView.findViewById(R.id.store_grade2);
 
-        });
+            cover2.setImageResource(0);
+            title.setText("");
+            author.setText("");
+            grade.setText("");
 
-        cover2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Fragment book = new cat_preview();
-                final FragmentTransaction bookInfoFrag = getChildFragmentManager().beginTransaction();
-                bookInfoFrag.add(R.id.show_book_info, book, "cat").addToBackStack("cat").commit();
-            }
+        } else {
+            cover2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Fragment book = new cat_preview();
+                    final FragmentTransaction bookInfoFrag = getChildFragmentManager().beginTransaction();
+                    bookInfoFrag.add(R.id.show_book_info, book, "cat").addToBackStack("cat").commit();
+                }
 
-        });
+            });
+        }
 
+        if (bought && bought_cat) {
+            none.setText("Wow! Looks like you've bought all the books in the store! Good job!");
+        }
 
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,9 +122,11 @@ public class TabStore extends Fragment {
                 String name = extras.getString("name");
                 String avatar = extras.getString("avatar");
                 Boolean bought = extras.getBoolean("bought");
+                Boolean bought_cat = extras.getBoolean("bought_cat");
 
                 intent.putExtra("name", name);
                 intent.putExtra("bought", bought);
+                intent.putExtra("bought_cat", bought_cat);
                 intent.putExtra("avatar", avatar);
 
                 startActivity(intent);
@@ -118,13 +134,6 @@ public class TabStore extends Fragment {
 
         });
 
-        add_to_cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "The Polar Express has been added to your cart!", Toast.LENGTH_LONG).show();
-            }
-
-        });
         return rootView;
     }
     /*

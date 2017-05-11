@@ -41,25 +41,23 @@
             android:layout_below="@+id/book_title" />
     </LinearLayout>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/book_cover"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="29dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="27dp"
-        android:background="@android:color/transparent"/>
+        android:layout_marginStart="27dp" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/book_cover2"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="29dp"
         android:layout_below="@+id/book_cover"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="27dp"
-        android:backgound="@android:color/transparent"/>
+        android:layout_marginStart="27dp" />
 
     <LinearLayout
         android:layout_width="300dp"
@@ -67,7 +65,7 @@
         android:orientation="vertical"
         android:layout_marginStart="30dp"
         android:layout_alignTop="@+id/book_cover2"
-        android:layout_toEndOf="@+id/book_cover2d"
+        android:layout_toEndOf="@+id/book_cover2"
         android:layout_marginTop="22dp">
 
         <TextView

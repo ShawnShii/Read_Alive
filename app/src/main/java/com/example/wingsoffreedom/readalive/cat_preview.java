@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class cat_preview extends Fragment {
 
@@ -24,6 +25,16 @@ public class cat_preview extends Fragment {
         final View rootView = inflater.inflate(R.layout.cat_preview, container, false);
 
         final TextView close = (TextView) rootView.findViewById(R.id.close_cat);
+
+        TextView add = (TextView) rootView.findViewById(R.id.add);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "The Cat in the Hat has been added to your cart!", Toast.LENGTH_LONG).show();
+            }
+
+        });
 
         close.setOnClickListener(new View.OnClickListener() {
             @Override
