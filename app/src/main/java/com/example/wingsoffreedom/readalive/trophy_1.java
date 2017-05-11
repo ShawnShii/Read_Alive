@@ -37,6 +37,7 @@ public class trophy_1 extends Fragment {
                 trophy_img.setImageResource(0);
                 trophy_txt.setText("");
                 close.setText("");
+                trophy_layout.setVisibility(View.INVISIBLE);
             }
         });
 
